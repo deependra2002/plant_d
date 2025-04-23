@@ -1,0 +1,19 @@
+[biild-system]
+requires=["setuptools>=42","wheel"]
+build_backend="setuptools.biild_meta"
+
+[project]
+name="plant_dieases_project"
+version="0.0.1"
+description="a brief description of project"
+readme="README.md"
+license={file="LINCENSE"}
+
+authors=[
+    {name="Deependra ku",email="dk4550319@gmail.com"}
+]
+
+dependencies=[
+    "requests>=2.25",
+    "numpy>=1.20"
+]
