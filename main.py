@@ -8,9 +8,9 @@ import streamlit as st
 
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
-#model_path = "plant_disease_prediction.h5"
+model_path = "C:\model\plant_diease_predction.h5"
 # Load the pre-trained model
-model = tf.keras.models.load_model("plant_diease_predction.h5")
+model = tf.keras.models.load_model(model_path)
 
 # loading the class names
 class_indices = json.load(open("class_indices.json"))
