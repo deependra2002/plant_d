@@ -8,7 +8,7 @@ import streamlit as st
 
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = "C:\model\plant_diease_predction.h5"
+model_path = os.path.dirname("C:\model\plant_diease_predction.h5")
 # Load the pre-trained model
 model = tf.keras.models.load_model(model_path)
 
