@@ -5,12 +5,26 @@ from PIL import Image
 import numpy as np
 import tensorflow as tf
 import streamlit as st
+import gdown
+
+
+file_id="1sUosx3XFWAhV_lGRGoiFLQXaq-NyKk6P"
+model_path="C:\model\plant_diease_predction.h5"
+
+if not os.path.exists(model_path):
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, model_path, quiet=False)
+@st.cache_resource
+def load_my_model():
+    return tf.keras.models.load_model(model_path)
+
+model = load_my_model()    
 
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.dirname("C:\model\plant_diease_predction.h5")
+#model_path = os.path.dirname("C:\model\plant_diease_predction.h5")
 # Load the pre-trained model
-model = tf.keras.models.load_model(model_path)
+#model = tf.keras.models.load_model(model_path)
 
 # loading the class names
 class_indices = json.load(open("class_indices.json"))
