@@ -8,11 +8,11 @@ import streamlit as st
 import gdown
 
 
-#file_id="1sUosx3XFWAhV_lGRGoiFLQXaq-NyKk6P"
-model_path="C:\model\plant_diease_predction.h5"
+file_id="1sUosx3XFWAhV_lGRGoiFLQXaq-NyKk6P"
+model_path="plant_diease_predction.h5"
 
 if not os.path.exists(model_path):
-    url = f"https://drive.google.com/file/d/1sUosx3XFWAhV_lGRGoiFLQXaq-NyKk6P/view?usp=drive_link"
+    url = f"https://drive.google.com/uc?id={file_id}"
     gdown.download(url, model_path, quiet=False)
 @st.cache_resource
 def load_my_model():
