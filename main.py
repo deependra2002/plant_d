@@ -9,7 +9,7 @@ import gdown
 
 
 file_id="1sUosx3XFWAhV_lGRGoiFLQXaq-NyKk6P"
-model_path="plant_diease_predction.h5"
+model_path = "C:\model\plant_diease_predction.h5"
 
 if not os.path.exists(model_path):
     url = f"https://drive.google.com/uc?id={file_id}"
